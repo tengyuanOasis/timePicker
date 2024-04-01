@@ -1,0 +1,115 @@
+.date_pop {
+	padding: 0;
+	width: 100%;
+	min-height: 750rpx;
+	background-color: #fff;
+
+	.popup-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		box-sizing: border-box;
+		padding: 60rpx 40rpx;
+
+		.pop-title {
+			font-weight: bold;
+			font-size: 32rpx;
+			width: 90%;
+		}
+	}
+
+	.popup-content {
+		font-size: 28rpx;
+		position: relative;
+		height: 600rpx;
+	}
+
+	.date_box {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 40%;
+		height: 600rpx;
+		background: #f7f7f9;
+		.date_item {
+			padding: 0 40rpx;
+			line-height: 100rpx;
+		}
+		.date_active {
+			background: #fff;
+		}
+	}
+
+	.time_box {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 60%;
+		height: 600rpx;
+		.disabled {
+			color: #ccc;
+			&::after {
+				content: '已过期';
+				margin-left: 130rpx;
+			}
+		}
+		.outTime {
+			color: #ccc;
+			&::after {
+				content: '即将过期';
+				margin-left: 100rpx;
+			}
+		}
+		.time_item {
+			padding: 0 40rpx;
+			line-height: 100rpx;
+			height: 100rpx;
+		}
+	}
+
+	.time_active {
+		color: #ff5b29;
+		position: relative;
+		&::after {
+			position: absolute;
+			content: '✔';
+			color: '#ff5b29';
+			right: 15%;
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			display: block;
+		}
+	}
+
+	.popup-footer {
+		width: 100%;
+		height: 90rpx;
+		background-color: #fff;
+		display: flex;
+		// 上阴影
+		box-shadow: 0 -10rpx 20rpx 0 rgba(0, 0, 0, 0.05);
+
+		.footer-btn {
+			flex: 1;
+			text-align: center;
+			height: 100%;
+			// 字体居中
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 34rpx;
+			font-weight: bold;
+		}
+		.close {
+			color: #000;
+			border-right: 1px solid #ccc;
+		}
+		.submit {
+			text-align: center;
+			background: linear-gradient(90deg, #ffa03b 0%, #ff3b21 100%);
+			border-radius: 6rpx;
+			color: #ffffff;
+		}
+	}
+}
